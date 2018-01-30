@@ -2,15 +2,17 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes,RouterModule} from '@angular/router';
 
 import {loginRoutes} from './login/login.routing';
-import {dashboardRoutes} from './dashboard/dashboard.routing';
 export const routes: Routes = [
     {
       path: '',
-      redirectTo: '/login',
+      redirectTo: '/dashboard',
       pathMatch: 'full'
     },
     ...loginRoutes,
-    ...dashboardRoutes
+    {
+      path: 'dashboard',
+      loadChildren: './dashboard/dashboard.module#DashboardModule'
+    }
   ];
 
   export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
