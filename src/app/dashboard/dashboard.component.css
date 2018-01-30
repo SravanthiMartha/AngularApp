@@ -1,0 +1,11 @@
+.styledashboard{
+
+}
+.sidenav{
+    float:left;
+    width:20%;
+}
+.content{
+    float:left;
+    width:80%;
+}

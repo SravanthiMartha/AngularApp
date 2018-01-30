@@ -1,0 +1,7 @@
+.foot{
+    position:fixed;
+    background-color: blue;
+    color:brown;
+    bottom:0;
+    width:100%;
+}
