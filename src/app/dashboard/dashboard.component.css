@@ -9,3 +9,5 @@
     float:left;
     width:80%;
 }
+header {height: 25px; background-color: silver}
+#menu { float: left; width: 20%; background-color: pink }

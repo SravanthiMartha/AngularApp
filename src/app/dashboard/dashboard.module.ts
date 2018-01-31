@@ -1,26 +1,29 @@
 import {NgModule} from '@angular/core';
-
-import {DashboardRoutingModule} from './dashboard.routing';
-import {DashboardComponent} from './dashboard.component';
+import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
+import {RoutingAModule} from './dashboard.routing'
+import ArticleComponent from '../article/article.omponent';
+import CarouselComponent from '../carousel/carousel.component';
+import DashboardComponent from './dashboard.component';
+import TodoComponent from '../todo/todo.component';
 
 import {TopnavComponent } from './topnav/topnav.component';
-import {SidenavComponent} from './sidenav/sidenav.component';
+import SidenavComponent from './sidenav/sidenav.component';
 import {FooterComponent} from './footer/footer.component';
-import {ArticleComponent} from './article/article.component';
-import {TodoComponent} from './todo/todo.component';
 @NgModule({
   imports: [
-    DashboardRoutingModule,
+    RouterModule,
+    RoutingAModule,
+    CommonModule
   ],
   declarations: [
-    DashboardComponent, 
-    ArticleComponent,
-    TodoComponent,
     TopnavComponent,
     SidenavComponent,
-    FooterComponent
-    ],
-  providers: [],
+    FooterComponent,
+    ArticleComponent,
+    CarouselComponent,
+    DashboardComponent,
+    TodoComponent
+  ]
 })
-export class DashboardModule {
-}
+export class DashboardModule {}

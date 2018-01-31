@@ -1,19 +1,13 @@
-import {ModuleWithProviders} from '@angular/core';
-import {Routes,RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-import {loginRoutes} from './login/login.routing';
 export const routes: Routes = [
-    {
-      path: '',
-      redirectTo: '/dashboard',
-      pathMatch: 'full'
-    },
-    ...loginRoutes,
-    {
-      path: 'dashboard',
-      loadChildren: './dashboard/dashboard.module#DashboardModule'
-    }
-  ];
+    { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule'},
+    { path: 'login', loadChildren: './login/login.module#LoginModule'},
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+];
 
-  export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
-  
+export const appRoutingProviders: any[] = [
+
+];
+
+export const routing = RouterModule.forRoot(routes, {useHash: true});

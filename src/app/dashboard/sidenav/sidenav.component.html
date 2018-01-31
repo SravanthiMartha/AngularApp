@@ -1,8 +1,10 @@
-<div class="vertical-menu">
-    
-    <a routerLink="/article" routerLinkActive="active">article</a>
-    <a routerLink="/todo" routerLinkActive="active">TO Do link</a>
-    <a routerLink="/angular-form" routerLinkActive="active">Angular Form</a>
-    <a routerLink="/dialog" routerLinkActive="active">Model dialog</a>
-  </div>
+
+
+<ul class="vertical-menu">
+  <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+    <a [routerLink]="[menuItem.path]">
+                  <p>{{menuItem.title}}</p>
+              </a>
+  </li>
+</ul>
   
